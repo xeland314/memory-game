@@ -24,7 +24,7 @@ body {
 .encabezado {
     background-color: rgb(60, 130, 220);
     margin: 0px 0px 40px 0px;
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     width: var(--my-window);
     height: 50px;
     align-items: center;
