@@ -18,7 +18,7 @@ body {
     justify-content: baseline;
     align-items: center;
     text-align: center;
-    font-family: calibri;
+    font-family: Audiowide, sans-serif, calibri;
 }
 
 .encabezado {
@@ -29,7 +29,6 @@ body {
     height: 50px;
     align-items: center;
     text-align: center;
-    font-family: calibri;
     font-size: 250%;
 }
 
@@ -114,6 +113,7 @@ div {
     padding: 10px 30px;
     border-radius: 50px;
     border: none;
+    font-family: Audiowide, sans-serif;
     font-size: 100%;
     box-shadow: 0 10px #999;
 }
@@ -123,8 +123,8 @@ div {
     padding: 10px 30px;
     border-radius: 50px;
     border: none;
-    box-shadow: 0 6px #666;
-    transform: translateY(8px);
+    box-shadow: 0 1px #666;
+    transform: translateY(9px);
 }
 
 
