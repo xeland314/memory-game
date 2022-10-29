@@ -2,6 +2,12 @@
     --w: calc(70vw / 6);
     --h: calc(70vh / 4);
     --my-window: calc(100%);
+    --bg-body-color: rgb(255, 255, 255);
+    --border-color: rgb(58, 58, 63);
+    --bg-box-color: rgb(245, 245, 245);
+    --shadow-color: #999;
+    --first-color: rgb(30, 100, 200);
+    --second-color: rgb(100, 200, 255);
 }
 
 * {
@@ -11,7 +17,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: rgb(176, 215, 230);
+    background: var(--bg-body-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -21,15 +27,22 @@ body {
     font-family: Audiowide, sans-serif, calibri;
 }
 
-.encabezado {
-    background-color: rgb(60, 130, 220);
-    margin: 0px 0px 40px 0px;
+.encabezado, .pie-de-pagina {
+    background-color: var(--first-color);
     padding: 10px 0px 10px 0px;
     width: var(--my-window);
     height: 50px;
     align-items: center;
     text-align: center;
     font-size: 250%;
+}
+
+.encabezado {
+    margin: 0px 0px 50px 0px;
+}
+
+.pie-de-pagina {
+    margin: 50px 0px 0px 0px;
 }
 
 div {
@@ -55,7 +68,7 @@ div {
 .cara-frontal, .cara-posterior {
     position: absolute;
     backface-visibility: hidden;
-    box-shadow: inset 0 0 0 5px rgb(255, 255, 255);
+    box-shadow: inset 0 0 0 5px var(--border-color);
     font-size: 500%;
     display: flex;
     justify-content: center;
@@ -63,12 +76,12 @@ div {
 }
 
 .cara-posterior {
-    background-color: rgb(60, 130, 220);
+    background-color: var(--first-color);
     transform: rotateY(180deg);
 }
 
 .cara-frontal {
-    background: linear-gradient(rgb(30, 100, 200), rgb(110, 200, 255));
+    background: linear-gradient(var(--first-color), var(--second-color));
 }
 
 .cara-frontal:hover {
@@ -76,13 +89,23 @@ div {
 }
 
 .opciones-container, .puntuacion-container {
-    background-color: rgb(245, 245, 245);
+    background-color: var(--bg-box-color);
     margin: 10px;
     display: flex;
     border-radius: 4px;
-    border: rgb(58, 58, 63) 4px solid;
-    box-shadow: 10px 10px #999;
+    border: var(--border-color) 4px solid;
+    box-shadow: 10px 10px var(--shadow-color);
 }
+
+.tablero {
+    width: var(--my-window);
+    background-color: var(--bg-box-color);
+    display: flexbox;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 
 .opciones-container {
     padding: 10px 10px 20px 10px;
@@ -102,12 +125,12 @@ div {
 }
 
 .opcion-facil:hover, .opcion-normal:hover, .opcion-dificil:hover {
-    background-color: #74a5d3
+    background-color: var(--second-color)
 }
 
 .opcion-facil, .opcion-normal, .opcion-dificil {
     cursor: pointer;
-    background: rgb(40, 80, 240);
+    background: var(--first-color);
     display: block;
     margin: 15px;
     padding: 10px 30px;
@@ -115,7 +138,7 @@ div {
     border: none;
     font-family: Audiowide, sans-serif;
     font-size: 100%;
-    box-shadow: 0 10px #999;
+    box-shadow: 0 10px var(--shadow-color);
 }
 .opcion-facil:active, .opcion-normal:active, .opcion-dificil:active {
     cursor: pointer;
