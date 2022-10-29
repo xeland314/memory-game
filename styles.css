@@ -55,7 +55,7 @@ div {
 .cara-frontal, .cara-posterior {
     position: absolute;
     backface-visibility: hidden;
-    box-shadow: inset 0 0 0 5px rgb(255, 255, 255);
+    box-shadow: inset 0 0 0 5px rgb(58, 58, 63);
     font-size: 500%;
     display: flex;
     justify-content: center;
