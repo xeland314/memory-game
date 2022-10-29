@@ -140,6 +140,7 @@ div {
     font-size: 100%;
     box-shadow: 0 10px var(--shadow-color);
 }
+
 .opcion-facil:active, .opcion-normal:active, .opcion-dificil:active {
     cursor: pointer;
     background: linear-gradient(rgb(140, 180, 220), rgb(200, 240, 240));
