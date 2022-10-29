@@ -11,7 +11,7 @@
 body {
     padding: 0;
     margin: 0;
-    background: rgb(176, 215, 230);
+    background: rgb(255, 255, 255);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
