@@ -1,6 +1,6 @@
 <center> 
 
-# MemoryGame
+# memory-game
 ![Memory game](/images/memory-game.png)
 
 ### Dificultades del juego
