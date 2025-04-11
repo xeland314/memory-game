@@ -59,7 +59,6 @@ button {
   width: calc(20vw);
   max-width: 120px;
   min-width: 80px;
-  height: var(--h);
   aspect-ratio: 1 / 1; /* Mantiene una relación 1:1 para que siempre sea un cuadrado */
 }
 
