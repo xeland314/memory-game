@@ -17,7 +17,19 @@
   </head>
 
   <body>
-    <header class="encabezado">Juego de memoria</header>
+    <header class="encabezado">
+      <h1 class="titulo">Juego de memoria</h1>
+      <div class="contador">
+        <div>
+          <span>Número de intentos:</span>
+          <span id="intentos"></span>
+        </div>
+        <div>
+          <span>Pares encontrados:</span>
+          <span id="pares"></span>
+        </div>
+      </div>
+    </header>
 
     <main>
       <div class="tablero" id="tablero"></div>
@@ -30,17 +42,6 @@
         <button class="opcion-dificil" onclick="setJuegoDificil()">
           Difícil
         </button>
-      </div>
-
-      <div class="puntuacion-container">
-        <div>
-          <span>Número de intentos:</span>
-          <span id="intentos"></span>
-        </div>
-        <div>
-          <span>Pares encontrados:</span>
-          <span id="pares"></span>
-        </div>
       </div>
     </main>
 
