@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juego de memoria</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="scrollbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header class="encabezado">Juego de memoria</header>
 
-    <div class="tablero" id="tablero"> </div>
-    <br>
+    <main>
+      <div class="tablero" id="tablero"></div>
+      <br />
 
-    <div class="opciones-container">
+      <div class="opciones-container">
         <span class="titulo-opciones">Dificultad:</span>
         <button class="opcion-facil" onclick="setJuegoFacil()">Fácil</button>
         <button class="opcion-normal" onclick="setJuegoNormal()">Normal</button>
-        <button class="opcion-dificil" onclick="setJuegoDificil()">Difícil</button>
-    </div>
+        <button class="opcion-dificil" onclick="setJuegoDificil()">
+          Difícil
+        </button>
+      </div>
 
-    <div class="puntuacion-container">
-        <span>Número de intentos:</span>
-        <span id="intentos"></span>
-        <span>Pares encontrados:</span>
-        <span id="pares"></span>
-    </div>
+      <div class="puntuacion-container">
+        <div>
+          <span>Número de intentos:</span>
+          <span id="intentos"></span>
+        </div>
+        <div>
+          <span>Pares encontrados:</span>
+          <span id="pares"></span>
+        </div>
+      </div>
+    </main>
 
-    <footer class="pie-de-pagina">xeland314</footer>
+    <footer class="pie-de-pagina">
+      <a href="http://github.com/xeland314/" target="_blank">xeland314</a>
+    </footer>
     <script type="text/javascript" src="logic.js"></script>
-
-</body>
-
+  </body>
 </html>

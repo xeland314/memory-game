@@ -1,0 +1,17 @@
+:root {
+  scrollbar-color: var(--first-color) var(--bg-body-color);
+  scrollbar-width: auto;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

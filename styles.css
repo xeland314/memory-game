@@ -1,164 +1,211 @@
 :root {
-    --w: calc(70vw / 6);
-    --h: calc(70vh / 4);
-    --my-window: calc(100%);
-    --bg-body-color: rgb(255, 255, 255);
-    --border-color: rgb(58, 58, 63);
-    --bg-box-color: rgb(245, 245, 245);
-    --shadow-color: #999;
-    --first-color: rgb(30, 100, 200);
-    --second-color: rgb(100, 200, 255);
+  --w: calc(70vw / 6);
+  --h: calc(70vh / 4);
+  --bg-body-color: rgb(255, 255, 255);
+  --border-color: rgb(58, 58, 63);
+  --bg-box-color: rgb(245, 245, 245);
+  --shadow-color: #999;
+  --first-color: rgb(30, 100, 200);
+  --second-color: rgb(100, 200, 255);
 }
 
 * {
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    background: var(--bg-body-color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
-    text-align: center;
-    font-family: Audiowide, sans-serif, calibri;
+  padding: 0;
+  margin: 0;
+  background: var(--bg-body-color);
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  text-align: center;
+  font-family: Audiowide, sans-serif, calibri;
+  overflow-x: hidden;
 }
 
-.encabezado, .pie-de-pagina {
-    background-color: var(--first-color);
-    padding: 10px 0px 10px 0px;
-    width: var(--my-window);
-    height: 50px;
-    align-items: center;
-    text-align: center;
-    font-size: 250%;
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  justify-items: center;
 }
 
-.encabezado {
-    margin: 0px 0px 50px 0px;
+button {
+  width: 95%;
 }
 
+.encabezado,
 .pie-de-pagina {
-    margin: 50px 0px 0px 0px;
-}
-
-div {
-    display: inline-block;
+  background-color: var(--first-color);
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  align-items: center;
+  text-align: center;
+  font-size: calc(20px + 1vw);
+  padding: 10px;
 }
 
 .tarjeta-container,
 .tarjeta,
 .cara-frontal,
 .cara-posterior {
-    cursor: pointer;
-    width: var(--w);
-    min-width: 100px;
-    height: var(--h);
+  cursor: pointer;
+  width: calc(20vw);
+  max-width: 120px;
+  min-width: 80px;
+  height: var(--h);
 }
 
 .tarjeta {
-    position: relative;
-    transform-style: preserve-3d;
-    animation: iniciar 5s;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: iniciar 5s;
 }
 
-.cara-frontal, .cara-posterior {
-    position: absolute;
-    backface-visibility: hidden;
-    box-shadow: inset 0 0 0 5px var(--border-color);
-    font-size: 500%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cara-frontal,
+.cara-posterior {
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: inset 0 0 0 5px var(--border-color);
+  font-size: 500%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cara-posterior {
-    background-color: var(--first-color);
-    transform: rotateY(180deg);
+  background-color: var(--first-color);
+  transform: rotateY(180deg);
 }
 
 .cara-frontal {
-    background: linear-gradient(var(--first-color), var(--second-color));
+  background: linear-gradient(var(--first-color), var(--second-color));
 }
 
 .cara-frontal:hover {
-    background: linear-gradient(rgb(180, 20, 200), rgb(240, 140, 240)); 
+  background: linear-gradient(rgb(180, 20, 200), rgb(240, 140, 240));
 }
 
-.opciones-container, .puntuacion-container {
-    background-color: var(--bg-box-color);
-    margin: 10px;
-    display: flex;
-    border-radius: 4px;
-    border: var(--border-color) 4px solid;
-    box-shadow: 10px 10px var(--shadow-color);
-}
-
-.tablero {
-    width: var(--my-window);
-    background-color: var(--bg-box-color);
-    display: flexbox;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-
-.opciones-container {
-    padding: 10px 10px 20px 10px;
-    flex-direction: row;
-    float: left;
-    gap: 6px;
+.opciones-container,
+.puntuacion-container {
+  max-width: 95%;
+  background-color: var(--bg-box-color);
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  border-radius: 4px;
+  border: var(--border-color) 4px solid;
+  box-shadow: 10px 10px var(--shadow-color);
 }
 
 .puntuacion-container {
-    padding: 10px;
-    flex-direction: column;
-    float: right;
+  flex-direction: column;
+}
+
+.tablero {
+  min-height: 250px;
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--bg-box-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.opciones-container {
+  padding: 10px 10px 20px 10px;
+  flex-direction: row;
+  float: left;
+  gap: 6px;
+}
+
+.puntuacion-container {
+  padding: 10px;
+  flex-direction: column;
+  float: right;
 }
 
 .titulo-opciones {
-    align-self: center;
+  align-self: center;
 }
 
-.opcion-facil:hover, .opcion-normal:hover, .opcion-dificil:hover {
-    background-color: var(--second-color)
+.opcion-facil:hover,
+.opcion-normal:hover,
+.opcion-dificil:hover {
+  background-color: var(--second-color);
 }
 
-.opcion-facil, .opcion-normal, .opcion-dificil {
-    cursor: pointer;
-    background: var(--first-color);
-    display: block;
-    margin: 15px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    border: none;
-    font-family: Audiowide, sans-serif;
-    font-size: 100%;
-    box-shadow: 0 10px var(--shadow-color);
+.opcion-facil,
+.opcion-normal,
+.opcion-dificil {
+  cursor: pointer;
+  background: var(--first-color);
+  display: block;
+  margin: 15px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  font-family: Audiowide, sans-serif;
+  font-size: calc(14px + 0.5vw);
+  box-shadow: 0 10px var(--shadow-color);
 }
 
-.opcion-facil:active, .opcion-normal:active, .opcion-dificil:active {
-    cursor: pointer;
-    background: linear-gradient(rgb(140, 180, 220), rgb(200, 240, 240));
-    padding: 10px 30px;
-    border-radius: 50px;
-    border: none;
-    box-shadow: 0 1px #666;
-    transform: translateY(9px);
+.opcion-facil:active,
+.opcion-normal:active,
+.opcion-dificil:active {
+  cursor: pointer;
+  background: linear-gradient(rgb(140, 180, 220), rgb(200, 240, 240));
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 1px #666;
+  transform: translateY(9px);
 }
-
 
 @keyframes iniciar {
+  20%,
+  90% {
+    transform: rotateY(180deg);
+  }
 
-    20%, 90% {
-        transform: rotateY(180deg);
-    }
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+}
 
-    0%, 100% {
-        transform: rotateY(0deg);
-    }
+@media screen and (max-width: 768px) {
+  .tarjeta-container,
+  .tarjeta,
+  .cara-frontal,
+  .cara-posterior {
+    width: calc(25vw);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .opciones-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    width: 95%;
+  }
+  .tarjeta-container,
+  .tarjeta,
+  .cara-frontal,
+  .cara-posterior {
+    width: calc(40vw);
+  }
 }
